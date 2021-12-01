@@ -21,12 +21,13 @@ int main()
     rep(i,N){
         rep(j,N){
             a[i][j]=distr(eng)*2*pi;
-            if(j==0||j==N-1||i==0||i==N-1)a[i][j]=0;
-            c<<i<<" "<<j<<" "<<pow(cos(a[i][j]/2.0),2)<<endl;
+            if(j==0||j==N-1)a[i][j]=0;
+            if(i==0||i==N-1)a[i][j]=0;
+            c<<i<<" "<<j<<" "<<pow(cos(a[i][j]),2)<<endl;
         }
         c<<endl;
     }
-    rep(num,1000000){
+    rep(num,100000000){
         int i=rand() % (N-2) +1;
         int j=rand() % (N-2) +1;
         double energy=0;
@@ -41,7 +42,7 @@ int main()
     after.open("after");
     rep(i,N){
         rep(j,N){
-            after<<i<<" "<<j<<" "<<pow(cos(a[i][j]/2.0),2)<<endl;
+            after<<i<<" "<<j<<" "<<pow(cos(a[i][j]),2)<<endl;
         }
         after<<endl;
     }
