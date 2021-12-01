@@ -22,8 +22,11 @@ int main()
     int N;
     N = 100;
     double a[N + 10][N + 10];
-    rep(i, 100)
-    {
-        // cout<<get_rand()<<endl;
+    rep(i,100){
+        rep(j,100){
+            a[i][j]=distr(eng);
+            cout<<i<<" "<<j<<" "<<a[i][j]<<endl;
+        }
+        cout<<endl;
     }
 }
