@@ -5,14 +5,15 @@
 #include <string>
 #include <bits/stdc++.h>
 using namespace std;
-#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+#define rep(i, n) for (long long int i = 0; i < (long long int)(n); i++)
 int main()
 {   
     ofstream a;
-    a.open("c");
-    rep(i,5){
-        a<<1<<i<<" "<<endl;;
+    a.open("sample.txt");
+    rep(i,1000){
+        a<<rand() % 100<<" "<<endl;;
     }
+
     /*
     std::ofstream writing_file;
     std::string filename = "sample.txt";
